@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Form Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .submitted-data{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--User input form-->
+        <form @submit.prevent="submitForm">
+            <input v-model="name" placeholder="Enter your name" required />
+            <input v-model="email" type="email" placeholder="Enter your email" required />
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display submitted data if the form has been submitted -->
+        <div class="submitted-data" v-if="submitted">
+            <h3>Submitted Data:</h3>
+            <p>Name: {{ name }}</p> 
+            <p>Email: {{ email }}</p> 
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data:{
+                name: '',
+                email: '',
+                submitted: false
+            },
+            methods: {
+                submitForm() {
+                    this.submitted = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
