@@ -1,0 +1,19 @@
+[
+  {
+    "id": "001",
+    "name": "Product 12",
+    "ratings": "2"
+  },
+  {
+    "id": "002",
+    "name": "Product 222",
+    "ratings": "3"
+
+  },
+  {
+    "id": "003",
+    "name": "Product 567",
+    "ratings": "4"
+
+  }
+]
