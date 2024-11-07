@@ -151,27 +151,7 @@
                         this.cart.push(classItem);
                         alert(`${classItem.title} has been added to your cart!`);
                     },
-                    openLoginModal() {
-                        // Show the login modal
-                        let loginModal = new bootstrap.Modal(this.$refs.loginModal);
-                        loginModal.show();
-                    },
-                    openRegisterModal() {
-                        // Show the register modal
-                        let registerModal = new bootstrap.Modal(this.$refs.registerModal);
-                        registerModal.show();
-                    },
-                    login() {
-                        // Simulate a login process
-                        alert(`Logged in as ${this.loginData.email}`);
-                    },
-                    register() {
-                        if (this.registerData.password === this.registerData.confirmPassword) {
-                            alert(`Registered with email: ${this.registerData.email}`);
-                        } else {
-                            alert('Passwords do not match!');
-                        }
-                    }
+                   
                 }
             });
         </script>
